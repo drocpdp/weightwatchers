@@ -1,0 +1,22 @@
+{
+  "name": "weightwatchers",
+  "version": "1.0.0",
+  "description": "track and record and visualize weight progress",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drocpdp/weightwatchers.git"
+  },
+  "author": "David Eynon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drocpdp/weightwatchers/issues"
+  },
+  "homepage": "https://github.com/drocpdp/weightwatchers#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
