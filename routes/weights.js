@@ -2,10 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    getWeights
+    getWeights,
+    modifyWeight,
+    addWeight
 } = require('../controllers/weights')
 
-//either this way or...
 router.get('/', getWeights)
+router.post('/', addWeight)
+router.put('/:oldWeight', modifyWeight)
 
 module.exports = router

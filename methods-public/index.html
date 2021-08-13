@@ -42,7 +42,7 @@
     <script>
       const result = document.querySelector('.result')
 
-      const fetchPeople = async () => {
+      const fetchWeights = async () => {
         try {
           const { data } = await axios.get('/api/weights')
 
@@ -54,19 +54,19 @@
           result.innerHTML = `<div class="alert alert-danger">Can't Fetch Data</div>`
         }
       }
-      fetchPeople()
+      fetchWeights()
       // submit form
       const btn = document.querySelector('.submit-btn')
       const input = document.querySelector('.form-input')
       const formAlert = document.querySelector('.form-alert')
       btn.addEventListener('click', async (e) => {
         e.preventDefault()
-        const nameValue = input.value
+        const weightValue = input.value
 
         try {
-          const { data } = await axios.post('/api/people', { name: nameValue })
+          const { data } = await axios.post('/api/weights', { newWeight: weightValue })
           const h5 = document.createElement('h5')
-          h5.textContent = data.person
+          h5.textContent = data.weights
           result.appendChild(h5)
         } catch (error) {
           // console.log(error.response)
